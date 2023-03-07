@@ -1,6 +1,5 @@
 import React, { memo } from "react";
 import "./style.scss";
-import useWhyDidYouUpdate from "ahooks/lib/useWhyDidYouUpdate";
 
 type CategoriesProps = {
     activeIndex: number,
@@ -10,8 +9,6 @@ type CategoriesProps = {
 const categories = ["All", "Meat", "Vegetarian", "Grill", "Spicy", "Closed"];
 
 const Categories: React.FC<CategoriesProps> = memo(({ activeIndex, setActiveIndex }) => {
-    useWhyDidYouUpdate('Categories', { activeIndex, setActiveIndex })
-
     return (
         <div className="categories">
             <ul>
